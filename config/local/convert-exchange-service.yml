@@ -1,0 +1,25 @@
+server:
+  port: 0
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+spring:
+  application:
+    name: convert-exchange-service
+  data:
+    web:
+      pageable:
+        default-page-size: 25
+  datasource:
+    url: jdbc:postgresql://localhost/exchange
+    username: takhtaulov
+    password: takhtaulov
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    show-sql: true
